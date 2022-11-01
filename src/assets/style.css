@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sc-header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sc-header nav {
+    justify-content: flex-end;
+    flex-grow: 1;
+    display: flex;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+.sc-header a {
+    text-decoration: none;
+}
+
+.sc-header img {
+    width: 20px;
+    height: 20px;
+}
+
+.sc-header h1 {
+    color: black;
+}
+
+.sc-header input {
+    width: 200px;
+}
+
+.sc-content {
+    flex-grow: 1;
+}
+
+.sc-footer {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+}
