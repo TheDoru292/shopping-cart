@@ -24,15 +24,15 @@ const Header = ({ cart }) => {
 
   return (
     <div className="sc-header">
-      <Link className="sc-header-first" to="/">
+      <Link className="sc-header-first" to="/shopping-cart/">
         <h1>Waination</h1>
       </Link>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/shop">Shop</Link>
-        <Link to="/about">About Us</Link>
+        <Link to="/shopping-cart/">Home</Link>
+        <Link to="/shopping-cart/shop">Shop</Link>
+        <Link to="/shopping-cart/about">About Us</Link>
       </nav>
-      <Link className="sc-header-last" to="/cart">
+      <Link className="sc-header-last" to="/shopping-cart/cart">
         <img src="/assets/cart.svg" alt="cart" />
         <p>{cartItems}</p>
       </Link>
