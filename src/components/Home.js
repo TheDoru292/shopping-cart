@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import getItems from "../db/items";
 import { getRandomItems, sortByRatingUp } from "../modules/filter";
 import Item from "./Item";
 
 function Home(props) {
   const [items, setItems] = useState(getItems());
-
-  useEffect(() => {
-    console.log(items);
-  }, [props.items, items]);
 
   return (
     <div className="sc-content">

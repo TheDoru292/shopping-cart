@@ -8,24 +8,43 @@ import NotFound from "./components/404";
 import About from "./components/About";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
+import Category from "./components/Category";
 import "./assets/style.css";
 
 function App() {
-  const [itemsNumber, setItemsNumber] = useState(0);
+  const [cart, setCart] = useState([]);
 
-  const increment = () => {
-    setItemsNumber(itemsNumber + 1);
-  };
+  function setInCart(obj) {
+    let array = cart.concat(obj);
+    setCart(array);
+    console.log(cart);
+  }
+
+  function editCart(gotObj) {
+    setCart((current) =>
+      current.map((obj) => {
+        if (obj.id === gotObj.id) {
+          return { ...obj, quantity: gotObj.quantity };
+        }
+
+        return obj;
+      })
+    );
+  }
 
   return (
     <div className="App">
-      <Header items={itemsNumber} />
+      <Header cart={cart} />
 
       <Routes>
-        <Route path="/" element={<Home cb={increment} />} />
-        <Route path="/shop" element={<Shop />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:category" element={<Category />} />
         <Route path="/about" element={<About />} />
-        <Route path="/product:id" element={<Product />}></Route>
+        <Route
+          path="/product/:id"
+          element={<Product cart={cart} cb={setInCart} editCart={editCart} />}
+        ></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
