@@ -37,16 +37,16 @@ function App() {
       <Header cart={cart} />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/:category" element={<Category />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/shopping-cart/" element={<Home />} />
+        <Route path="/shopping-cart/shop" element={<Shop />} />
+        <Route path="/shopping-cart/shop/:category" element={<Category />} />
+        <Route path="/shopping-cart/about" element={<About />} />
         <Route
-          path="/product/:id"
+          path="/shopping-cart/product/:id"
           element={<Product cart={cart} cb={setInCart} editCart={editCart} />}
         ></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+        <Route path="/shopping-cart/cart" element={<Cart />}></Route>
+        <Route path="/shopping-cart/*" element={<NotFound />}></Route>
       </Routes>
 
       <Footer />
