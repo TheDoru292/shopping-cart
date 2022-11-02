@@ -1,7 +1,7 @@
 let itemsArray = [
   {
     name: "Waifu Body Pillow",
-    url: "/assets/images/body-pillow.webp",
+    url: "/shopping-cart/assets/images/body-pillow.webp",
     category: "body-pillow anime",
     price: 30,
     rating: 3.4,
@@ -11,7 +11,7 @@ let itemsArray = [
   },
   {
     name: "500GB SSD",
-    url: "/assets/images/ssd.webp",
+    url: "/shopping-cart/assets/images/ssd.webp",
     category: "computer storage ssd",
     price: 25.3,
     rating: 4.1,
@@ -21,7 +21,7 @@ let itemsArray = [
   },
   {
     name: "Waifu Body Pillow v2.0",
-    url: "/assets/images/body-pillow.webp",
+    url: "/shopping-cart/assets/images/body-pillow.webp",
     category: "body-pillow anime",
     price: 50,
     rating: 2.1,
@@ -31,7 +31,7 @@ let itemsArray = [
   },
   {
     name: "Ganyu Figurine",
-    url: "/assets/images/ganyu-figurine.webp",
+    url: "/shopping-cart/assets/images/ganyu-figurine.webp",
     category: "figurine anime",
     price: 130,
     rating: 5.0,
@@ -41,7 +41,7 @@ let itemsArray = [
   },
   {
     name: "Keqing Figurine",
-    url: "/assets/images/keqing-figurine.webp",
+    url: "/shopping-cart/assets/images/keqing-figurine.webp",
     category: "figurine anime",
     price: 125,
     rating: 4.8,
@@ -51,7 +51,7 @@ let itemsArray = [
   },
   {
     name: "RTX 3090",
-    url: "/assets/images/rtx-3090.jpg",
+    url: "/shopping-cart/assets/images/rtx-3090.jpg",
     category: "computer gpu",
     price: 1300,
     rating: 2.0,
@@ -61,7 +61,7 @@ let itemsArray = [
   },
   {
     name: "RTX 4090",
-    url: "/assets/images/rtx-4090.jpg",
+    url: "/shopping-cart/assets/images/rtx-4090.jpg",
     category: "computer gpu",
     price: 2000,
     rating: 3.6,
@@ -71,7 +71,7 @@ let itemsArray = [
   },
   {
     name: "RX 570",
-    url: "/assets/images/rx-570.jpg",
+    url: "/shopping-cart/assets/images/rx-570.jpg",
     category: "computer gpu",
     price: 570,
     rating: 4.5,
@@ -81,7 +81,7 @@ let itemsArray = [
   },
   {
     name: "RX 580",
-    url: "/assets/images/rx-580.jpg",
+    url: "/shopping-cart/assets/images/rx-580.jpg",
     category: "computer gpu",
     price: 600,
     rating: 4.3,
@@ -91,7 +91,7 @@ let itemsArray = [
   },
   {
     name: "Ryzen 5 1600",
-    url: "/assets/images/cpu.jpg",
+    url: "/shopping-cart/assets/images/cpu.jpg",
     category: "computer cpu",
     price: 350,
     rating: 3.2,
@@ -101,7 +101,7 @@ let itemsArray = [
   },
   {
     name: "Intel i5 6500",
-    url: "/assets/images/cpu.jpg",
+    url: "/shopping-cart/assets/images/cpu.jpg",
     category: "computer cpu",
     price: 400,
     rating: 4.5,
@@ -111,7 +111,7 @@ let itemsArray = [
   },
   {
     name: "Raiden Mei Figurine",
-    url: "/assets/images/raiden-figurine.webp",
+    url: "/shopping-cart/assets/images/raiden-figurine.webp",
     category: "anime figurine",
     price: 135,
     rating: 4.2,
@@ -121,7 +121,7 @@ let itemsArray = [
   },
   {
     name: "Ryzen 7 1300X",
-    url: "/assets/images/cpu.jpg",
+    url: "/shopping-cart/assets/images/cpu.jpg",
     category: "computer cpu",
     price: 500,
     rating: 3.2,
@@ -131,7 +131,7 @@ let itemsArray = [
   },
   {
     name: "1TB SSD",
-    url: "/assets/images/ssd.webp",
+    url: "/shopping-cart/assets/images/ssd.webp",
     category: "computer storage ssd",
     price: 150,
     rating: 4.9,
@@ -141,7 +141,7 @@ let itemsArray = [
   },
   {
     name: "2TB HDD",
-    url: "/assets/images/hdd.webp",
+    url: "/shopping-cart/assets/images/hdd.webp",
     category: "computer storage hdd",
     price: 125,
     rating: 2.2,
@@ -151,7 +151,7 @@ let itemsArray = [
   },
   {
     name: "10TB HDD",
-    url: "/assets/images/hdd.webp",
+    url: "/shopping-cart/assets/images/hdd.webp",
     category: "computer storage hdd",
     price: 228,
     rating: 3.9,
@@ -161,7 +161,7 @@ let itemsArray = [
   },
   {
     name: "4TB SSD",
-    url: "/assets/images/ssd.webp",
+    url: "/shopping-cart/assets/images/ssd.webp",
     category: "computer storage ssd",
     price: 364,
     rating: 5.0,
@@ -171,7 +171,7 @@ let itemsArray = [
   },
   {
     name: "G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz",
-    url: "/assets/images/ram.jpg",
+    url: "/shopping-cart/assets/images/ram.jpg",
     category: "computer ram",
     price: 40,
     rating: 3.2,
@@ -181,7 +181,7 @@ let itemsArray = [
   },
   {
     name: "Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz",
-    url: "/assets/images/ram.jpg",
+    url: "/shopping-cart/assets/images/ram.jpg",
     category: "computer ram",
     price: 42,
     rating: 4.7,
@@ -191,7 +191,7 @@ let itemsArray = [
   },
   {
     name: "Kingston FURY Renegade 32GB (2x16GB) DDR4 3600MHz",
-    url: "/assets/images/ram.jpg",
+    url: "/shopping-cart/assets/images/ram.jpg",
     category: "computer ram",
     price: 86,
     rating: 4.2,
@@ -201,7 +201,7 @@ let itemsArray = [
   },
   {
     name: "Kingston FURY Beast RGB 16GB (2x8GB) DDR4 3200MHz",
-    url: "/assets/images/ram.jpg",
+    url: "/shopping-cart/assets/images/ram.jpg",
     category: "computer ram",
     price: 62,
     rating: 3.5,
@@ -211,7 +211,7 @@ let itemsArray = [
   },
   {
     name: "Corsair VENGEANCE LPX 32GB (2x16GB) DDR4 3200MHz",
-    url: "/assets/images/ram.jpg",
+    url: "/shopping-cart/assets/images/ram.jpg",
     category: "computer ram",
     price: 70,
     rating: 4.2,
@@ -221,7 +221,7 @@ let itemsArray = [
   },
   {
     name: "Team Group DELTA RGB 32GB (2x16GB) DDR5 6200MHz",
-    url: "/assets/images/ram.jpg",
+    url: "/shopping-cart/assets/images/ram.jpg",
     category: "computer ram",
     price: 150,
     rating: 0,
@@ -231,7 +231,7 @@ let itemsArray = [
   },
   {
     name: "Kingston FURY Beast 64GB (2x32GB) DDR4 3200MHz",
-    url: "/assets/images/ram.jpg",
+    url: "/shopping-cart/assets/images/ram.jpg",
     category: "computer ram",
     price: 120,
     rating: 0,
