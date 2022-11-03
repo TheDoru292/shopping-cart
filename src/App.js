@@ -8,7 +8,6 @@ import NotFound from "./components/404";
 import About from "./components/About";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
-import Category from "./components/Category";
 import "./assets/style.css";
 
 function App() {
@@ -38,9 +37,9 @@ function App() {
 
       <Routes>
         <Route path="/shopping-cart/" element={<Home />} />
-        <Route path="/shopping-cart/shop" element={<Shop />} />
-        <Route path="/shopping-cart/shop/:category" element={<Category />} />
         <Route path="/shopping-cart/about" element={<About />} />
+        <Route path="/shopping-cart/shop" element={<Shop />} />
+        <Route path="/shopping-cart/shop/:category" element={<Shop />} />
         <Route
           path="/shopping-cart/product/:id"
           element={<Product cart={cart} cb={setInCart} editCart={editCart} />}

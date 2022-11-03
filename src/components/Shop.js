@@ -1,19 +1,33 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import getItems from "../db/items";
+import Item from "./Item";
+import Sidebar from "./Sidebar";
 import {
+  filterByCategory,
   sortByPriceDown,
   sortByPriceUp,
   sortByRatingUp,
   sortBySoldUp,
 } from "../modules/filter";
-import Item from "./Item";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Shop() {
+  const param = useParams();
+  const [runOnce, setRunOnce] = useState(false);
+  const [oldCategory, setOldCategory] = useState("");
   const [items, setItems] = useState(getItems());
   const [selected, setSelected] = useState("featured");
 
-  useEffect(() => {
+  if (runOnce === false) {
+    setOldCategory(param.category);
+    setRunOnce(true);
+  }
+
+  function handleChange(e) {
+    setSelected(e.target.value);
+  }
+
+  const sort = useCallback(() => {
     if (selected === "price-up") {
       setItems(sortByPriceUp(getItems(), items.length));
     } else if (selected === "price-down") {
@@ -25,48 +39,32 @@ function Shop() {
     }
   }, [selected, items.length]);
 
-  function handleChange(e) {
-    setSelected(e.target.value);
-    console.log("hi");
-  }
+  useEffect(() => {
+    console.log();
+    if (selected) {
+      sort();
+    }
+    if (param.category && runOnce === false) {
+      setItems(filterByCategory(getItems(), param.category, items.length));
+      setRunOnce(true);
+    }
+    if (runOnce === true && param.category !== oldCategory) {
+      setItems(filterByCategory(getItems(), param.category, items.length));
+      setOldCategory(param.category);
+    }
+  }, [
+    selected,
+    items,
+    sort,
+    param.category,
+    items.length,
+    oldCategory,
+    runOnce,
+  ]);
 
   return (
     <div className="sc-content shop">
-      <div className="sidebar">
-        <div className="item-count">
-          <h2>Showing {items.length} items</h2>
-        </div>
-        <div className="sidebar-content">
-          <div>
-            <h3>Categories</h3>
-            <Link to="/shopping-cart/shop/computer">
-              <p>Computer</p>
-            </Link>
-            <Link to="/shopping-cart/shop/figurines">
-              <p>Figurines</p>
-            </Link>
-            <Link to="/shopping-cart/shop/pillows">
-              <p>Pillows</p>
-            </Link>
-          </div>
-          <div className="sort">
-            <label htmlFor="sort-by">Sort By</label>
-            <select
-              value={selected}
-              onChange={handleChange}
-              name="sort"
-              id="sort-by"
-            >
-              <option value="featured">Featured</option>
-              <option value="price-down">Price: Low to High</option>
-              <option value="price-up">Price: High to Low</option>
-              <option value="rating">Highest Rating</option>
-              <option value="sold">Amount Sold</option>
-            </select>
-          </div>
-          <div className="sort"></div>
-        </div>
-      </div>
+      <Sidebar cb={handleChange} selected={selected} items={items.length} />
       <div className="item-container">
         {items.map((item) => {
           return (
