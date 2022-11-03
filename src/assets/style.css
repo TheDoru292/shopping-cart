@@ -192,6 +192,10 @@
     display: flex;
 }
 
+.sort {
+    margin-top: 10px;
+}
+
 .sidebar {
     width: 220px;
     flex-shrink: 0;

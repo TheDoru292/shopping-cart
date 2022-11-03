@@ -33,7 +33,7 @@ const Header = ({ cart }) => {
         <Link to="/shopping-cart/about">About Us</Link>
       </nav>
       <Link className="sc-header-last" to="/shopping-cart/cart">
-        <img src="/assets/cart.svg" alt="cart" />
+        <img src="/shopping-cart/assets/cart.svg" alt="cart" />
         <p>{cartItems}</p>
       </Link>
     </div>
