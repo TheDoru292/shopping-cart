@@ -44,6 +44,9 @@ function Shop() {
     if (selected) {
       sort();
     }
+    if (!param.category) {
+      setItems(getItems());
+    }
     if (param.category && runOnce === false) {
       setItems(filterByCategory(getItems(), param.category, items.length));
       setRunOnce(true);
