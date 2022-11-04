@@ -35,7 +35,17 @@ function Product({ cart, cb, editCart, removeFromCart }) {
       );
     } else {
       return (
-        <button onClick={() => cb({ id: item[0].id, quantity: 1 })}>
+        <button
+          onClick={() =>
+            cb({
+              name: item[0].name,
+              price: item[0].price,
+              id: item[0].id,
+              quantity: 1,
+              url: item[0].url,
+            })
+          }
+        >
           Add to cart
         </button>
       );

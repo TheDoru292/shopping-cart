@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Shop from "./components/Shop";
@@ -11,24 +11,38 @@ import Cart from "./components/Cart";
 import "./assets/style.css";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const saved = localStorage.getItem("cart");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
+
+  useEffect(() => {
+    console.log(cart);
+  });
 
   function setInCart(obj) {
     let array = cart.concat(obj);
     setCart(array);
-    console.log(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
   }
 
   function editCart(gotObj) {
-    setCart((current) =>
-      current.map((obj) => {
-        if (obj.id === gotObj.id) {
-          return { ...obj, quantity: gotObj.quantity };
-        }
+    let array = cart.map((current) => {
+      if (current.id === gotObj.id) {
+        return { ...current, quantity: gotObj.quantity };
+      }
 
-        return obj;
-      })
-    );
+      return current;
+    });
+    setCart(array);
+    localStorage.setItem("cart", JSON.stringify(array));
+  }
+
+  function removefromCart(objId) {
+    let array = cart.filter((obj) => obj.id !== objId);
+    setCart(array);
+    localStorage.setItem("cart", JSON.stringify(array));
   }
 
   return (
@@ -42,9 +56,25 @@ function App() {
         <Route path="/shopping-cart/shop/:category" element={<Shop />} />
         <Route
           path="/shopping-cart/product/:id"
-          element={<Product cart={cart} cb={setInCart} editCart={editCart} />}
+          element={
+            <Product
+              cart={cart}
+              cb={setInCart}
+              editCart={editCart}
+              removeFromCart={removefromCart}
+            />
+          }
         ></Route>
-        <Route path="/shopping-cart/cart" element={<Cart />}></Route>
+        <Route
+          path="/shopping-cart/cart"
+          element={
+            <Cart
+              cart={cart}
+              editCart={editCart}
+              removeFromCart={removefromCart}
+            />
+          }
+        ></Route>
         <Route path="/shopping-cart/*" element={<NotFound />}></Route>
       </Routes>
 
