@@ -11,8 +11,7 @@ function Cart({ cart, editCart, removeFromCart }) {
         <div className="cart-empty">
           <h2>Your cart is empty</h2>
           <p>
-            To add items in your cart go{" "}
-            <Link to="/shopping-cart/shop">here</Link>.
+            To add items in your cart go <Link to="/shop">here</Link>.
           </p>
         </div>
       ) : (
