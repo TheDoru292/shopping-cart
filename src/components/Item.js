@@ -4,7 +4,7 @@ import StarRatings from "react-star-ratings";
 function Item({ itemName, itemUrl, itemPrice, itemRating, itemId }) {
   return (
     <div className="top-item">
-      <Link className="top-item-link" to={`/shopping-cart/product/${itemId}`}>
+      <Link className="top-item-link" to={`/product/${itemId}`}>
         <img src={itemUrl} alt={itemName} />
         <p className="top-item-name">{itemName}</p>
         <div className="top-item-rating">

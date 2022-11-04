@@ -50,12 +50,12 @@ function App() {
       <Header cart={cart} />
 
       <Routes>
-        <Route path="/shopping-cart/" element={<Home />} />
-        <Route path="/shopping-cart/about" element={<About />} />
-        <Route path="/shopping-cart/shop" element={<Shop />} />
-        <Route path="/shopping-cart/shop/:category" element={<Shop />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:category" element={<Shop />} />
         <Route
-          path="/shopping-cart/product/:id"
+          path="/product/:id"
           element={
             <Product
               cart={cart}
@@ -66,7 +66,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/shopping-cart/cart"
+          path="/cart"
           element={
             <Cart
               cart={cart}
@@ -75,7 +75,7 @@ function App() {
             />
           }
         ></Route>
-        <Route path="/shopping-cart/*" element={<NotFound />}></Route>
+        <Route path="/*" element={<NotFound />}></Route>
       </Routes>
 
       <Footer />

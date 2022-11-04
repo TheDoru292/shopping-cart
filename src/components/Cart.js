@@ -30,7 +30,7 @@ function Cart({ cart, editCart, removeFromCart }) {
                 <div className="cart-item">
                   <img src={item.url} alt={item.name} />
                   <div className="cart-item-name">
-                    <Link to={`/shopping-cart/product/${item.id}`}>
+                    <Link to={`/product/${item.id}`}>
                       <p>{item.name}</p>
                     </Link>
                   </div>
