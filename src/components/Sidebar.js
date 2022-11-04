@@ -9,13 +9,13 @@ function Sidebar({ cb, selected, items }) {
       <div className="sidebar-content">
         <div>
           <h3>Categories</h3>
-          <Link to="/shopping-cart/shop/computer">
+          <Link to="/shop/computer">
             <p>Computer</p>
           </Link>
-          <Link to="/shopping-cart/shop/figurines">
+          <Link to="/shop/figurines">
             <p>Figurines</p>
           </Link>
-          <Link to="/shopping-cart/shop/pillows">
+          <Link to="/shop/pillows">
             <p>Pillows</p>
           </Link>
         </div>

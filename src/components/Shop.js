@@ -40,7 +40,6 @@ function Shop() {
   }, [selected, items.length]);
 
   useEffect(() => {
-    console.log();
     if (selected) {
       sort();
     }

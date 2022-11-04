@@ -17,10 +17,6 @@ function App() {
     return initialValue || [];
   });
 
-  useEffect(() => {
-    console.log(cart);
-  });
-
   function setInCart(obj) {
     let array = cart.concat(obj);
     setCart(array);

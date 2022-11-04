@@ -1,11 +1,6 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Cart({ cart, editCart, removeFromCart }) {
-  useEffect(() => {
-    console.log(cart);
-  });
-
   function handleChange(id, quantity) {
     editCart({ id: id, quantity: quantity });
   }
@@ -25,7 +20,6 @@ function Cart({ cart, editCart, removeFromCart }) {
           <div className="cart-items">
             <h2>Cart</h2>
             {cart.map((item) => {
-              console.log(item.url);
               return (
                 <div className="cart-item">
                   <img src={item.url} alt={item.name} />

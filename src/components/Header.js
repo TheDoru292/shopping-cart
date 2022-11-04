@@ -5,9 +5,6 @@ const Header = ({ cart }) => {
   const [cartItems, setCartItems] = useState(0);
 
   useEffect(() => {
-    if (cart === undefined) {
-      console.log("There are no items in cart!");
-    }
     if (cart.length === 1) {
       setCartItems(cart[0].quantity);
     }

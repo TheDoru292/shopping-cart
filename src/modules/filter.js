@@ -33,7 +33,6 @@ function sortBySoldDown(array, num = 10) {
 }
 
 function filterByCategory(array, categoryName) {
-  console.log(array, categoryName);
   let newArray = array.filter((item) => item.category === categoryName);
   return newArray;
 }
